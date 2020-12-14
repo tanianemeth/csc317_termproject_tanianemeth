@@ -5,5 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+// MDB Lightbox Init
+// $(function () {
+//   $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+//   });
 
 module.exports = router;

@@ -1,0 +1,39 @@
+body {
+    
+    padding: 0;
+    margin: 0;
+    background: #b3cdbf;
+  }
+  /*--- navigation bar ---*/
+  .navbar {
+    background:#9cd28a;
+  }
+  .nav-link,
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+  .navbar-brand img{
+    max-height: 75%;
+  }
+  .nav-link {
+    margin-right: 1em !important;
+  }
+  .nav-link:hover {
+    color: #000;
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .dropdown-menu {
+    margin-top: 0;
+  }
+
+  .header {
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }

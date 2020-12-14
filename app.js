@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index');
 var createUserRouter = require('./routes/create_user');
 var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
+var viewImageRouter = require('./routes/view_image');
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -31,5 +32,6 @@ app.use('/', indexRouter);
 app.use('/create_user', createUserRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
+app.use('/view_image', viewImageRouter);
 
 module.exports = app;

@@ -17,7 +17,7 @@
             <ul class="navbar-nav ml-auto ">
                 <% if (session.logged_in) { %>
                 <li class="nav-item active mr-1">
-                    <a class="btn btn-primary" role="button" href="#"> Your Name
+                    <a class="btn btn-primary" role="button" href="#"> <%= session.user.first_name + ' ' + session.user.last_name %> 
                     </a>
 
                 </li>

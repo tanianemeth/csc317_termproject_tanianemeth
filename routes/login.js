@@ -10,10 +10,13 @@ router.post('/', function(req, res, next) {
   console.log(email, password);
   //check whether valid email and password 
   connection.query('SELECT * FROM users WHERE email = ? AND password = ?' , [email, password], function(error, results){
-      if (results.length = 0){
+      if (results.length == 0){
         res.send("No account exists with this username and password, please create an account")
       }
       else{
+          var user = results[0];
+          req.session.user = user;
+        
           req.session.logged_in = true;
           res.redirect('/');
       }

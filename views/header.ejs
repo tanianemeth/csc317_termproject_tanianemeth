@@ -18,15 +18,17 @@
                 <% if (session.logged_in) { %>
                 <li class="nav-item active mr-1">
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <%= session.user.first_name + ' ' + session.user.last_name %> 
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <%= session.user.first_name + ' ' + session.user.last_name %>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Your Images</a>
-                          <a class="dropdown-item" href="#">Post a Photo</a>
+                            <a class="dropdown-item" href="#">Your Images</a>
+                            <a class="dropdown-item" href="#" data-toggle=modal data-target="#image_upload">Post a
+                                Photo</a>
                         </div>
-                      </div>
-                   
+                    </div>
+
 
                 </li>
                 <li class="nav-item active mr-1">
@@ -122,6 +124,42 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 <!-- End Login Form -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--- image upload modal-->
+<div class="modal fade" id="image_upload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="image_upload">Select a photo to upload</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Image Form -->
+                <form action="image_upload" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <!-- Upload image input-->
+                        <div class="custom-file">
+                            <input type="file" name = "image" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <input type="text" name="comment" class="form-control" placeholder="Photo caption (optional)">
+                </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <!-- End Image Form -->
             </div>
 
         </div>

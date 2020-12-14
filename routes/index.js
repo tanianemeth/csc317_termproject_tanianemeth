@@ -3,11 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  console.log('session:', req.session);
+  res.redirect("/index.html");
 });
-// MDB Lightbox Init
-// $(function () {
-//   $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-//   });
+
 
 module.exports = router;

@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="stylesheets/home.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/view_image.css">
+        
+        <!-- <title>Express</title>
+        <link rel="stylesheet" href="/stylesheets/style.css"> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+      </head>
+    <body>
+        <nav class="navbar navbar-expand-md justify-content-between">
+            <a class="navbar-brand" href="#">
+              <img class="img-fluid" src="https://img.icons8.com/plasticine/100/000000/camera.png"/>
+            </a>
+            <div>
+              <form class="form-inline justify-content-center" style="text-align: center;">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+              </form>
+            </div>
+            <div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto ">
+                  <li class="nav-item active mr-1">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#createAccount">Create Account</button>
+                  </li>
+                  <li class="nav-item active">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login">Login</button>
+          
+                  </li>
+                  
+                
+             
+                </ul>
+              </div>
+            </div>
+            
+          </nav> 
+          
+          <div class="container">
+              <div class="row justify-content-center">
+                <img class="img-fluid main_image" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg" alt="Card image cap">
+
+              </div>
+              <div class="row justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Username</h5>
+                  <p class="card-text">Caption would go here.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Cromment one</li>
+                  <li class="list-group-item">Comment two</li>
+                </ul>
+                <div class="card-body">
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#comment">Comment</button>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Comment Modal -->
+<div class="modal fade" id="comment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="exampleModalLabel">Add a Comment</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+           <!-- Comment Form -->
+           <form>
+            <div class="form-group">
+              <label for="comment"></label>
+              <input type="text" class="form-control" id="comment" aria-describedby="emailHelp" placeholder="Your text here">
+          
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <!-- End Comment Form -->
+        </div>
+     
+      </div>
+    </div>
+  </div>
+    </body>
+
+</html>

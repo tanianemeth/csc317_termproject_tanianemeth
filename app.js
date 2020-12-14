@@ -10,8 +10,11 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var createUserRouter = require('./routes/create_user');
 var loginRouter = require('./routes/login');
+var logoutRouter = require('./routes/logout');
 
 var app = express();
+app.set('view engine', 'ejs');
+app.set('views', './views');
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -27,5 +30,6 @@ app.use(express.static(path.join(__dirname, 'public'), {index: false}));
 app.use('/', indexRouter);
 app.use('/create_user', createUserRouter);
 app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
 
 module.exports = app;

@@ -36,13 +36,18 @@
           <p class="card-text"><%= image.description %></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cromment one</li>
-          <li class="list-group-item">Comment two</li>
-        </ul>
-        <div class="card-body">
-          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#comment">Comment</button>
+          <% for(var comment of comments){ %>
+            <li class="list-group-item"><%= comment.text %> </li>
 
-        </div>
+         <% }%>
+          
+        </ul>
+        <% if(session.logged_in){ %>
+          <div class="card-body">
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#comment">Comment</button>
+          </div>
+        <%}%>
+    
       </div>
     </div>
 
@@ -60,10 +65,11 @@
         </div>
         <div class="modal-body">
           <!-- Comment Form -->
-          <form>
+          <form action="/comments" method="POST">
             <div class="form-group">
+              <input name="image" type="hidden" value="<%= image.id %>">
               <label for="comment"></label>
-              <input type="text" class="form-control" id="comment" aria-describedby="emailHelp"
+              <input type="text" name="text" class="form-control" id="comment" aria-describedby="emailHelp"
                 placeholder="Your text here">
 
             </div>

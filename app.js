@@ -14,6 +14,7 @@ var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
 var viewImageRouter = require('./routes/view_image');
 var uploadImageRouter = require('./routes/upload_image');
+var searchRouter = require('./routes/search');
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -37,5 +38,6 @@ app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
 app.use('/view_image', viewImageRouter);
 app.use('/upload_image', uploadImageRouter);
+app.use('/search', searchRouter);
 
 module.exports = app;

@@ -26,17 +26,12 @@
     <% } for (var image of images) { %>
     <div class="container">
         <div class="row justify-content-center">
+            <a href="/view_image?id=<%= image.id %> ">
             <img class="img-fluid main_image" src="/uploads/<%= image.filename %>" alt="Card image cap">
+        </a>
 
         </div>
-        <div class="row justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title"><%= image.title %></h5>
-                    <p class="card-text"><%= image.description %></p>
-                </div>
-            </div>
-        </div>
+     
 
     </div>
     <% } %> 

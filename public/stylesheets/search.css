@@ -1,0 +1,14 @@
+/* .img-fluid-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+} */
+.container {
+    width: 500px;
+ }
+ 
+ .responsive-img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #b3cdbf;
+ }

@@ -1,4 +1,11 @@
+.container {
+    width: 500px;
+ }
+
 .main_image{
+    width: 100%;
+    height: auto;
     border: 10px solid white;
     margin: 10px;
 }
+

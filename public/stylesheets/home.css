@@ -13,10 +13,18 @@ body {
     margin: 0;
     padding: 0;
     color: #fff;
-    cursor: pointer;
+    cursor: pointer;    width: 65px;
+  }
+
+  .container{
+    color: rgb(138, 133, 133);
+    font-family: sans-serif;
   }
   .navbar-brand img{
     max-height: 75%;
+  }
+  .carousel-item{
+    border: 20px solid #b3cdbf;
   }
   .nav-link {
     margin-right: 1em !important;
@@ -36,4 +44,8 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+  }
+  
+  html, body {
+    height: 100%;
   }

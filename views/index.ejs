@@ -36,25 +36,19 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
+
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="/view_image">
-              <img class="d-block w-100 img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg" alt="First slide">
+          <% for(var i=0; i<images.length; i++){  %>
+          <div class="carousel-item <%= i == 0 ? "active" : "" %>">
+            <% if(images[i].id != undefined){ %>
+            <a href="/view_image?id=<%= images[i].id %> ">
+              <% } %>
+              <img class="d-block w-100 img-fluid" src="/uploads/<%= images[i].filename %> " alt="First slide">
+              <% if(images[i].id != undefined){ %>
             </a>
+            <% } %>
           </div>
-          <div class="carousel-item">
-            <a href="/view_image">
-              <img class="d-block w-100 img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg" alt="First slide">
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="/view_image">
-              <img class="d-block w-100 img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg" alt="First slide">
-            </a>
-          </div>
+          <% } %>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
